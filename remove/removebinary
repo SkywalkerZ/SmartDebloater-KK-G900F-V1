@@ -1,0 +1,199 @@
+#!/sbin/sh
+
+###########################################WARNING############################################## 
+##                                                                                            ##
+## NO PERSONAL USE WITHOUT PERMISSION OF SkywalkerZ                                           ##
+## ANY OTHER USE WITHOUT PERMISSION WILL BE REPORTED                                          ##
+##                                                                                            ##
+## YOU HAVE BEEN WARNED                                                                       ##
+##                                                                                            ##
+## PART OF SMARTDROID                                                                         ##
+##                                                                                            ##
+################################################################################################
+
+mount /dev/block/mmcblk0p23 /system
+mount /dev/block/mmcblk0p26 /data
+
+if file_getprop("/tmp/aroma-data/uninstall.prop","item.0.1") == "1" then
+cd /system/app
+rm /system/app/AccuweatherPhone2014.apk
+rm /system/app/WeatherDaemon2014.apk
+rm /system/app/AccuweatherPhone2014.odex
+rm /system/app/WeatherDaemon2014.odex
+endif
+
+if file_getprop("/tmp/aroma-data/uninstall.prop","item.0.2") == "1" then
+cd /system/app
+rm /system/app/AllShareCastPlayer.apk
+rm /system/app/AllShareCastPlayer.odex
+rm /system/app/AllshareFileShare.apk
+rm /system/app/AllshareFileShare.odex
+rm /system/app/AllshareFileShareClient.apk
+rm /system/app/AllshareFileShareClient.odex
+rm /system/app/AllshareFileShareServer.apk
+rm /system/app/AllshareFileShareServer.odex
+rm /system/app/AllshareMediaServer.apk
+rm /system/app/AllshareMediaServer.odex
+rm /system/app/AllshareMediaShare.apk
+rm /system/app/AllshareMediaShare.odex
+endif
+
+if file_getprop("/tmp/aroma-data/uninstall.prop","item.0.3") == "1" then
+cd /system/app
+rm /system/app/AntHalService.apk
+rm /system/app/AntHalService.odex
+rm /system/app/ANTPlusPlugins.apk
+rm /system/app/ANTRadioService.apk
+endif
+
+if file_getprop("/tmp/aroma-data/uninstall.prop","item.0.4") == "1" then
+cd /system/app
+rm /system/app/SecCalculator2.apk
+rm /system/app/SecCalculator2.odex
+endif
+
+if file_getprop("/tmp/aroma-data/uninstall.prop","item.0.5") == "1" then
+cd /system/app
+rm /system/app/SPlanner.apk
+rm /system/app/SPlanner.odex
+rm /system/app/SPlannerWidget.apk
+rm /system/app/SPlannerWidget.odex
+endif
+
+if file_getprop("/tmp/aroma-data/uninstall.prop","item.0.6") == "1" then
+cd /system/app
+rm /system/app/ChatON_MARKET.apk
+cd /system/lib
+rm /system/lib/libChatOnAMSImageFilterLibs-1.0.2.so
+cd /data/app
+rm /data/app/com.sec.chaton-2.apk
+rm /data/app/com.coolets.chaton-2.apk
+endif
+
+if file_getprop("/tmp/aroma-data/uninstall.prop","item.0.7") == "1" then
+cd /system/app
+rm /system/app/DigitalClock.apk
+rm /system/app/DigitalClock.odex
+rm /system/app/DigitalClockEasy.apk
+rm /system/app/DigitalClockEasy.odex
+endif
+
+if file_getprop("/tmp/aroma-data/uninstall.prop","item.0.8") == "1" then
+cd /system/app
+rm /system/app/Dropbox.apk
+rm /system/app/DropboxOOBE.apk
+cd /data/app
+rm /data/app/com.dropbox.android-1.apk
+rm /data/app/com.dropbox.android-2.apk
+rm /data/app/com.dropbox.android-3.apk
+endif
+
+if file_getprop("/tmp/aroma-data/uninstall.prop","item.0.9") == "1" then
+cd /system/app
+rm /system/app/DualClockDigital.apk
+rm /system/app/DualClockDigital.odex
+endif
+
+if file_getprop("/tmp/aroma-data/uninstall.prop","item.0.10") == "1" then
+cd /system/priv-app
+rm /system/priv-app/DSMForwarding.apk
+rm /system/priv-app/DSMForwarding.odex
+rm /system/priv-app/DSMLawmo.apk
+rm /system/priv-app/DSMLawmo.odex
+endif
+
+if file_getprop("/tmp/aroma-data/gapps.prop","item.0.1") == "1" then
+cd /system/app
+rm /system/app/Books.apk
+cd /data/app
+rm /data/app/com.google.android.apps.books-1.apk
+rm /data/app/com.google.android.apps.books-2.apk
+rm /data/app/com.google.android.apps.books-3.apk
+endif
+
+if file_getprop("/tmp/aroma-data/gapps.prop","item.0.2") == "1" then
+cd /system/app
+rm /system/app/Chrome.apk
+cd /system/lib
+rm /system/lib/libchromeview.so
+cd /data/app
+rm /data/app/com.android.chrome-1.apk
+rm /data/app/com.android.chrome-2.apk
+rm /data/app/com.android.chrome-3.apk
+endif
+
+if file_getprop("/tmp/aroma-data/gapps.prop","item.0.3") == "1" then
+cd /system/app
+rm /system/app/Drive.apk
+cd /data/app
+rm /data/app/com.google.android.apps.docs-1.apk
+rm /data/app/com.google.android.apps.docs-2.apk
+rm /data/app/com.google.android.apps.docs-3.apk
+endif
+
+if file_getprop("/tmp/aroma-data/gapps.prop","item.0.4") == "1" then
+cd /system/app
+rm /system/app/Gmail2.apk
+cd /data/app
+rm /data/app/com.google.android.gm-1.apk
+rm /data/app/com.google.android.gm-2.apk
+rm /data/app/com.google.android.gm-3.apk
+endif
+
+if file_getprop("/tmp/aroma-data/gapps.prop","item.0.5") == "1" then
+cd /system/app
+rm /system/app/PlusOne.apk
+cd /data/app
+rm /data/app/com.google.android.apps.plus-1.apk
+rm /data/app/com.google.android.apps.plus-2.apk
+rm /data/app/com.google.android.apps.plus-3.apk
+endif
+
+if file_getprop("/tmp/aroma-data/gapps.prop","item.0.6") == "1" then
+cd /system/priv-app
+rm /system/priv-app/Velvet.apk
+endif
+
+if file_getprop("/tmp/aroma-data/gapps.prop","item.0.7") == "1" then
+cd /system/app
+rm /system/app/Hangouts.apk
+cd /data/app
+rm /data/app/com.google.android.talk-1.apk
+rm /data/app/com.google.android.talk-2.apk
+rm /data/app/com.google.android.talk-3.apk
+cd /system/lib
+rm /system/lib/videochat_jni.so
+endif
+
+if file_getprop("/tmp/aroma-data/gapps.prop","item.0.8") == "1" then
+cd /system/app
+rm /system/app/GMS_Maps.apk
+rm /system/app/Street.apk
+endif
+
+if file_getprop("/tmp/aroma-data/gapps.prop","item.0.9") == "1" then
+cd /system/app
+rm /system/app/Music2.apk
+endif
+
+if file_getprop("/tmp/aroma-data/gapps.prop","item.0.10") == "1" then
+cd /system/app
+rm /system/app/PlayGames.apk
+endif
+
+if file_getprop("/tmp/aroma-data/gapps.prop","item.0.11") == "1" then
+cd /system/app
+rm /system/app/GoogleSearchWidget.apk
+endif
+
+if file_getprop("/tmp/aroma-data/gapps.prop","item.0.12") == "1" then
+cd /system/app
+rm /system/app/YouTube.apk
+endif
+
+rm -r /data/dalvik-cache
+
+exit
+
+##By SkywalkerZ
+## For Any Roms G900F KK

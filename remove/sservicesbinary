@@ -1,0 +1,38 @@
+#!/sbin/sh
+
+###########################################WARNING############################################## 
+##                                                                                            ##
+## NO PERSONAL USE WITHOUT PERMISSION OF SkywalkerZ                                           ##
+## ANY OTHER USE WITHOUT PERMISSION WILL BE REPORTED                                          ##
+##                                                                                            ##
+## YOU HAVE BEEN WARNED                                                                       ##
+##                                                                                            ##
+## PART OF SMARTDROID                                                                         ##
+##                                                                                            ##
+################################################################################################
+
+mount /dev/block/mmcblk0p23 /system
+mount /dev/block/mmcblk0p26 /data
+
+cd /system/app
+rm /system/app/FWUpgrade.apk
+rm /system/app/FWUpgrade.odex
+rm /system/app/SamsungAppsWidget_Phone.apk
+rm /system/app/SamsungWidget_ActiveApplication.apk
+rm /system/app/SamsungWidget_ActiveApplication.odex
+cd /system/priv-app
+rm /system/priv-app/SamsungApps_K.apk
+rm /system/priv-app/SamsungBilling.apk
+rm /system/priv-app/SamsungLinkPlatform.apk
+rm /system/priv-app/Samsungservice2_K.apk
+rm /system/priv-app/PCWClientS18.apk
+rm /system/priv-app/SPPPushClient_Prod.apk
+cd /system/lib
+cd /data/app
+
+rm -r /data/dalvik-cache
+
+exit
+
+##By SkywalkerZ
+## For Any Roms G900F KK

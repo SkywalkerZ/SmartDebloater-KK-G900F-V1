@@ -1,0 +1,36 @@
+#!/sbin/sh
+
+###########################################WARNING############################################## 
+##                                                                                            ##
+## NO PERSONAL USE WITHOUT PERMISSION OF SkywalkerZ                                           ##
+## ANY OTHER USE WITHOUT PERMISSION WILL BE REPORTED                                          ##
+##                                                                                            ##
+## YOU HAVE BEEN WARNED                                                                       ##
+##                                                                                            ##
+## PART OF SMARTDROID                                                                         ##
+##                                                                                            ##
+################################################################################################
+
+mount /dev/block/mmcblk0p23 /system
+mount /dev/block/mmcblk0p26 /data
+
+cd /system/app
+cd /system/priv-app
+rm /system/priv-app/sCloudBackupApp.apk
+rm /system/priv-app/sCloudDataRelay.apk
+rm /system/priv-app/sCloudDataSync.apk
+rm /system/priv-app/sCloudQuotaApp.apk
+rm /system/priv-app/sCloudSyncCalendar.apk
+rm /system/priv-app/sCloudSyncContacts.apk
+rm /system/priv-app/sCloudSyncMemo.apk
+rm /system/priv-app/sCloudSyncSBrowser.apk
+rm /system/priv-app/sCloudSyncSNote3.apk
+cd /system/lib
+cd /data/app
+
+rm -r /data/dalvik-cache
+
+exit
+
+##By SkywalkerZ
+## For Any Roms G900F KK

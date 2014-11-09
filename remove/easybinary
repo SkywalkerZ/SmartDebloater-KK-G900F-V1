@@ -1,0 +1,35 @@
+#!/sbin/sh
+
+###########################################WARNING############################################## 
+##                                                                                            ##
+## NO PERSONAL USE WITHOUT PERMISSION OF SkywalkerZ                                           ##
+## ANY OTHER USE WITHOUT PERMISSION WILL BE REPORTED                                          ##
+##                                                                                            ##
+## YOU HAVE BEEN WARNED                                                                       ##
+##                                                                                            ##
+## PART OF SMARTDROID                                                                         ##
+##                                                                                            ##
+################################################################################################
+
+mount /dev/block/mmcblk0p23 /system
+mount /dev/block/mmcblk0p26 /data
+
+cd /system/app
+rm /system/app/EasymodeContactsWidget.apk
+rm /system/app/EasymodeContactsWidget.odex
+rm /system/app/EasyOneHand2.apk
+rm /system/app/EasyOneHand2.odex
+rm /system/app/EasySettings.apk
+rm /system/app/EasySettings.odex
+cd /system/priv-app
+rm /system/priv-app/EasyLauncher2.apk
+rm /system/priv-app/EasyLauncher2.odex
+cd /system/lib
+cd /data/app
+
+rm -r /data/dalvik-cache
+
+exit
+
+##By SkywalkerZ
+## For Any Roms G900F KK

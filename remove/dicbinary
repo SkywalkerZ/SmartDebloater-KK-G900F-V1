@@ -1,0 +1,28 @@
+#!/sbin/sh
+
+###########################################WARNING############################################## 
+##                                                                                            ##
+## NO PERSONAL USE WITHOUT PERMISSION OF SkywalkerZ                                           ##
+## ANY OTHER USE WITHOUT PERMISSION WILL BE REPORTED                                          ##
+##                                                                                            ##
+## YOU HAVE BEEN WARNED                                                                       ##
+##                                                                                            ##
+## PART OF SMARTDROID                                                                         ##
+##                                                                                            ##
+################################################################################################
+
+mount /dev/block/mmcblk0p23 /system
+mount /dev/block/mmcblk0p26 /data
+
+cd /system/app
+rm /system/app/SecDict.apk
+rm /system/app/SecDict.odex
+cd /system/lib
+cd /data/app
+
+rm -r /data/dalvik-cache
+
+exit
+
+##By SkywalkerZ
+## For Any Roms G900F KK

@@ -1,0 +1,350 @@
+unmount("/system");
+set_progress(0.42);
+ui_print("DEBLOATING  STARTED");
+ui_print("*******************");
+
+ui_print(">>Mounting /system");
+run_program("/sbin/mount", "-t", "auto", "/system");
+ui_print(">>Mounting /data");
+run_program("/sbin/mount", "-t", "auto", "/data");
+
+##################################################################################
+##                       REMOVE BLOAT
+
+ui_print("DELETING...");
+
+if file_getprop("/tmp/aroma-data/uninstall.prop","item.0.1") == "1" then
+package_extract_file("remove/accubinary", "/tmp/accubinary.sh");
+set_perm(0, 0, 0777, "/tmp/accubinary.sh");
+run_program("/tmp/accubinary.sh");
+endif;
+
+if file_getprop("/tmp/aroma-data/uninstall.prop","item.0.2") == "1" then
+package_extract_file("remove/allsharebinary", "/tmp/allsharebinary.sh");
+set_perm(0, 0, 0777, "/tmp/allsharebinary.sh");
+run_program("/tmp/allsharebinary.sh");
+endif;
+
+if file_getprop("/tmp/aroma-data/uninstall.prop","item.0.3") == "1" then
+package_extract_file("remove/antbinary", "/tmp/antbinary.sh");
+set_perm(0, 0, 0777, "/tmp/antbinary.sh");
+run_program("/tmp/antbinary.sh");
+endif;
+
+if file_getprop("/tmp/aroma-data/uninstall.prop","item.0.4") == "1" then
+package_extract_file("remove/calcbinary", "/tmp/calcbinary.sh");
+set_perm(0, 0, 0777, "/tmp/calcbinary.sh");
+run_program("/tmp/calcbinary.sh");
+endif;
+
+if file_getprop("/tmp/aroma-data/uninstall.prop","item.0.5") == "1" then
+package_extract_file("remove/calenderbinary", "/tmp/calenderbinary.sh");
+set_perm(0, 0, 0777, "/tmp/calenderbinary.sh");
+run_program("/tmp/calenderbinary.sh");
+endif;
+
+if file_getprop("/tmp/aroma-data/uninstall.prop","item.0.6") == "1" then
+package_extract_file("remove/chatonbinary", "/tmp/chatonbinary.sh");
+set_perm(0, 0, 0777, "/tmp/chatonbinary.sh");
+run_program("/tmp/chatonbinary.sh");
+endif;
+
+if file_getprop("/tmp/aroma-data/uninstall.prop","item.0.7") == "1" then
+package_extract_file("remove/digitalbinary", "/tmp/digitalbinary.sh");
+set_perm(0, 0, 0777, "/tmp/digitalbinary.sh");
+run_program("/tmp/digitalbinary.sh");
+endif;
+
+if file_getprop("/tmp/aroma-data/uninstall.prop","item.0.8") == "1" then
+package_extract_file("remove/dropboxbinary", "/tmp/dropboxbinary.sh");
+set_perm(0, 0, 0777, "/tmp/dropboxbinary.sh");
+run_program("/tmp/dropboxbinary.sh");
+endif;
+
+if file_getprop("/tmp/aroma-data/uninstall.prop","item.0.9") == "1" then
+package_extract_file("remove/dualbinary", "/tmp/dualbinary.sh");
+set_perm(0, 0, 0777, "/tmp/dualbinary.sh");
+run_program("/tmp/dualbinary.sh");
+endif;
+
+if file_getprop("/tmp/aroma-data/uninstall.prop","item.0.10") == "1" then
+package_extract_file("remove/dicbinary", "/tmp/dicbinary.sh");
+set_perm(0, 0, 0777, "/tmp/dicbinary.sh");
+run_program("/tmp/dicbinary.sh");
+endif;
+
+if file_getprop("/tmp/aroma-data/uninstall.prop","item.0.11") == "1" then
+package_extract_file("remove/dsmbinary", "/tmp/dsmbinary.sh");
+set_perm(0, 0, 0777, "/tmp/dsmbinary.sh");
+run_program("/tmp/dsmbinary.sh");
+endif;
+
+if file_getprop("/tmp/aroma-data/uninstall.prop","item.0.12") == "1" then
+package_extract_file("remove/easybinary", "/tmp/easybinary.sh");
+set_perm(0, 0, 0777, "/tmp/easybinary.sh");
+run_program("/tmp/easybinary.sh");
+endif;
+
+if file_getprop("/tmp/aroma-data/uninstall.prop","item.0.13") == "1" then
+package_extract_file("remove/emailbinary", "/tmp/emailbinary.sh");
+set_perm(0, 0, 0777, "/tmp/emailbinary.sh");
+run_program("/tmp/emailbinary.sh");
+endif;
+
+if file_getprop("/tmp/aroma-data/uninstall.prop","item.0.14") == "1" then
+package_extract_file("remove/exchangebinary", "/tmp/exchangebinary.sh");
+set_perm(0, 0, 0777, "/tmp/exchangebinary.sh");
+run_program("/tmp/exchangebinary.sh");
+endif;
+
+if file_getprop("/tmp/aroma-data/uninstall.prop","item.0.15") == "1" then
+package_extract_file("remove/gearbinary", "/tmp/gearbinary.sh");
+set_perm(0, 0, 0777, "/tmp/gearbinary.sh");
+run_program("/tmp/gearbinary.sh");
+endif;
+
+if file_getprop("/tmp/aroma-data/uninstall.prop","item.0.16") == "1" then
+package_extract_file("remove/groupbinary", "/tmp/groupbinary.sh");
+set_perm(0, 0, 0777, "/tmp/groupbinary.sh");
+run_program("/tmp/groupbinary.sh");
+endif;
+
+if file_getprop("/tmp/aroma-data/uninstall.prop","item.0.17") == "1" then
+package_extract_file("remove/kiesbinary", "/tmp/kiesbinary.sh");
+set_perm(0, 0, 0777, "/tmp/kiesbinary.sh");
+run_program("/tmp/kiesbinary.sh");
+endif;
+
+if file_getprop("/tmp/aroma-data/uninstall.prop","item.0.18") == "1" then
+package_extract_file("remove/magazinebinary", "/tmp/magazinebinary.sh");
+set_perm(0, 0, 0777, "/tmp/magazinebinary.sh");
+run_program("/tmp/magazinebinary.sh");
+endif;
+
+if file_getprop("/tmp/aroma-data/uninstall.prop","item.0.19") == "1" then
+package_extract_file("remove/mobilebinary", "/tmp/mobilebinary.sh");
+set_perm(0, 0, 0777, "/tmp/mobilebinary.sh");
+run_program("/tmp/mobilebinary.sh");
+endif;
+
+if file_getprop("/tmp/aroma-data/uninstall.prop","item.0.20") == "1" then
+package_extract_file("remove/pagebinary", "/tmp/pagebinary.sh");
+set_perm(0, 0, 0777, "/tmp/pagebinary.sh");
+run_program("/tmp/pagebinary.sh");
+endif;
+
+if file_getprop("/tmp/aroma-data/uninstall.prop","item.0.21") == "1" then
+package_extract_file("remove/polarisbinary", "/tmp/polarisbinary.sh");
+set_perm(0, 0, 0777, "/tmp/polarisbinary.sh");
+run_program("/tmp/polarisbinary.sh");
+endif;
+
+if file_getprop("/tmp/aroma-data/uninstall.prop","item.0.22") == "1" then
+package_extract_file("remove/sservicesbinary", "/tmp/sservicesbinary.sh");
+set_perm(0, 0, 0777, "/tmp/sservicesbinary.sh");
+run_program("/tmp/sservicesbinary.sh");
+endif;
+
+if file_getprop("/tmp/aroma-data/uninstall.prop","item.0.23") == "1" then
+package_extract_file("remove/shubbinary", "/tmp/shubbinary.sh");
+set_perm(0, 0, 0777, "/tmp/shubbinary.sh");
+run_program("/tmp/shubbinary.sh");
+endif;
+
+if file_getprop("/tmp/aroma-data/uninstall.prop","item.0.24") == "1" then
+package_extract_file("remove/sttsbinary", "/tmp/sttsbinary.sh");
+set_perm(0, 0, 0777, "/tmp/sttsbinary.sh");
+run_program("/tmp/sttsbinary.sh");
+endif;
+
+if file_getprop("/tmp/aroma-data/uninstall.prop","item.0.25") == "1" then
+package_extract_file("remove/sbrowserbinary", "/tmp/sbrowserbinary.sh");
+set_perm(0, 0, 0777, "/tmp/sbrowserbinary.sh");
+run_program("/tmp/sbrowserbinary.sh");
+endif;
+
+if file_getprop("/tmp/aroma-data/uninstall.prop","item.0.26") == "1" then
+package_extract_file("remove/scloudbinary", "/tmp/scloudbinary.sh");
+set_perm(0, 0, 0777, "/tmp/scloudbinary.sh");
+run_program("/tmp/scloudbinary.sh");
+endif;
+
+if file_getprop("/tmp/aroma-data/uninstall.prop","item.0.27") == "1" then
+package_extract_file("remove/sfinderbinary", "/tmp/sfinderbinary.sh");
+set_perm(0, 0, 0777, "/tmp/sfinderbinary.sh");
+run_program("/tmp/sfinderbinary.sh");
+endif;
+
+if file_getprop("/tmp/aroma-data/uninstall.prop","item.0.28") == "1" then
+package_extract_file("remove/smemobinary", "/tmp/smemobinary.sh");
+set_perm(0, 0, 0777, "/tmp/smemobinary.sh");
+run_program("/tmp/smemobinary.sh");
+endif;
+
+if file_getprop("/tmp/aroma-data/uninstall.prop","item.0.29") == "1" then
+package_extract_file("remove/sremotebinary", "/tmp/sremotebinary.sh");
+set_perm(0, 0, 0777, "/tmp/sremotebinary.sh");
+run_program("/tmp/sremotebinary.sh");
+endif;
+
+if file_getprop("/tmp/aroma-data/uninstall.prop","item.0.30") == "1" then
+package_extract_file("remove/smusicbinary", "/tmp/smusicbinary.sh");
+set_perm(0, 0, 0777, "/tmp/smusicbinary.sh");
+run_program("/tmp/smusicbinary.sh");
+endif;
+
+if file_getprop("/tmp/aroma-data/uninstall.prop","item.0.31") == "1" then
+package_extract_file("remove/svideobinary", "/tmp/svideobinary.sh");
+set_perm(0, 0, 0777, "/tmp/svideobinary.sh");
+run_program("/tmp/svideobinary.sh");
+endif;
+
+if file_getprop("/tmp/aroma-data/uninstall.prop","item.0.32") == "1" then
+package_extract_file("remove/svoicebinary", "/tmp/svoicebinary.sh");
+set_perm(0, 0, 0777, "/tmp/svoicebinary.sh");
+run_program("/tmp/svoicebinary.sh");
+endif;
+
+if file_getprop("/tmp/aroma-data/uninstall.prop","item.0.33") == "1" then
+package_extract_file("remove/tutbinary", "/tmp/tutbinary.sh");
+set_perm(0, 0, 0777, "/tmp/tutbinary.sh");
+run_program("/tmp/tutbinary.sh");
+endif;
+
+if file_getprop("/tmp/aroma-data/uninstall.prop","item.0.34") == "1" then
+package_extract_file("remove/testbinary", "/tmp/testbinary.sh");
+set_perm(0, 0, 0777, "/tmp/testbinary.sh");
+run_program("/tmp/testbinary.sh");
+endif;
+
+if file_getprop("/tmp/aroma-data/uninstall.prop","item.0.35") == "1" then
+package_extract_file("remove/talkbackbinary", "/tmp/talkbackbinary.sh");
+set_perm(0, 0, 0777, "/tmp/talkbackbinary.sh");
+run_program("/tmp/talkbackbinary.sh");
+endif;
+
+if file_getprop("/tmp/aroma-data/uninstall.prop","item.0.36") == "1" then
+package_extract_file("remove/travelbinary", "/tmp/travelbinary.sh");
+set_perm(0, 0, 0777, "/tmp/travelbinary.sh");
+run_program("/tmp/travelbinary.sh");
+endif;
+
+if file_getprop("/tmp/aroma-data/uninstall.prop","item.0.37") == "1" then
+package_extract_file("remove/voicerecorderbinary", "/tmp/voicerecorderbinary.sh");
+set_perm(0, 0, 0777, "/tmp/voicerecorderbinary.sh");
+run_program("/tmp/voicerecorderbinary.sh");
+endif;
+
+if file_getprop("/tmp/aroma-data/uninstall.prop","item.0.38") == "1" then
+package_extract_file("remove/voiceeditorbinary", "/tmp/voiceeditorbinary.sh");
+set_perm(0, 0, 0777, "/tmp/voiceeditorbinary.sh");
+run_program("/tmp/voiceeditorbinary.sh");
+endif;
+
+if file_getprop("/tmp/aroma-data/uninstall.prop","item.0.39") == "1" then
+package_extract_file("remove/flipbinary", "/tmp/flipbinary.sh");
+set_perm(0, 0, 0777, "/tmp/flipbinary.sh");
+run_program("/tmp/flipbinary.sh");
+endif;
+
+if file_getprop("/tmp/aroma-data/uninstall.prop","item.0.40") == "1" then
+package_extract_file("remove/otherbinary", "/tmp/otherbinary.sh");
+set_perm(0, 0, 0777, "/tmp/otherbinary.sh");
+run_program("/tmp/otherbinary.sh");
+endif;
+
+##################################################################################
+##                       REMOVE GAPPS
+
+if file_getprop("/tmp/aroma-data/gapps.prop","item.0.1") == "1" then
+package_extract_file("remove/gbooksbinary", "/tmp/gbooksbinary.sh");
+set_perm(0, 0, 0777, "/tmp/gbooksbinary.sh");
+run_program("/tmp/gbooksbinary.sh");
+endif;
+
+if file_getprop("/tmp/aroma-data/gapps.prop","item.0.2") == "1" then
+package_extract_file("remove/gchromebinary", "/tmp/gchromebinary.sh");
+set_perm(0, 0, 0777, "/tmp/gchromebinary.sh");
+run_program("/tmp/gchromebinary.sh");
+endif;
+
+if file_getprop("/tmp/aroma-data/gapps.prop","item.0.3") == "1" then
+package_extract_file("remove/gdrivebinary", "/tmp/gdrivebinary.sh");
+set_perm(0, 0, 0777, "/tmp/gdrivebinary.sh");
+run_program("/tmp/gdrivebinary.sh");
+endif;
+
+if file_getprop("/tmp/aroma-data/gapps.prop","item.0.4") == "1" then
+package_extract_file("remove/gmailbinary", "/tmp/gmailbinary.sh");
+set_perm(0, 0, 0777, "/tmp/gmailbinary.sh");
+run_program("/tmp/gmailbinary.sh");
+endif;
+
+if file_getprop("/tmp/aroma-data/gapps.prop","item.0.5") == "1" then
+package_extract_file("remove/gttsbinary", "/tmp/gttsbinary.sh");
+set_perm(0, 0, 0777, "/tmp/gttsbinary.sh");
+run_program("/tmp/gttsbinary.sh");
+endif;
+
+if file_getprop("/tmp/aroma-data/gapps.prop","item.0.6") == "1" then
+package_extract_file("remove/gplusbinary", "/tmp/gplusbinary.sh");
+set_perm(0, 0, 0777, "/tmp/gplusbinary.sh");
+run_program("/tmp/gplusbinary.sh");
+endif;
+
+if file_getprop("/tmp/aroma-data/gapps.prop","item.0.7") == "1" then
+package_extract_file("remove/gnowbinary", "/tmp/gnowbinary.sh");
+set_perm(0, 0, 0777, "/tmp/gnowbinary.sh");
+run_program("/tmp/gnowbinary.sh");
+endif;
+
+if file_getprop("/tmp/aroma-data/gapps.prop","item.0.8") == "1" then
+package_extract_file("remove/ghangoutsbinary", "/tmp/ghangoutsbinary.sh");
+set_perm(0, 0, 0777, "/tmp/ghangoutsbinary.sh");
+run_program("/tmp/ghangoutsbinary.sh");
+endif;
+
+if file_getprop("/tmp/aroma-data/gapps.prop","item.0.9") == "1" then
+package_extract_file("remove/gmapsbinary", "/tmp/gmapsbinary.sh");
+set_perm(0, 0, 0777, "/tmp/gmapsbinary.sh");
+run_program("/tmp/gmapsbinary.sh");
+endif;
+
+if file_getprop("/tmp/aroma-data/gapps.prop","item.0.10") == "1" then
+package_extract_file("remove/gmusicbinary", "/tmp/gmusicbinary.sh");
+set_perm(0, 0, 0777, "/tmp/gmusicbinary.sh");
+run_program("/tmp/gmusicbinary.sh");
+endif;
+
+if file_getprop("/tmp/aroma-data/gapps.prop","item.0.11") == "1" then
+package_extract_file("remove/ggamesbinary", "/tmp/ggamesbinary.sh");
+set_perm(0, 0, 0777, "/tmp/ggamesbinary.sh");
+run_program("/tmp/ggamesbinary.sh");
+endif;
+
+if file_getprop("/tmp/aroma-data/gapps.prop","item.0.12") == "1" then
+package_extract_file("remove/gvideobinary", "/tmp/gvideobinary.sh");
+set_perm(0, 0, 0777, "/tmp/gvideobinary.sh");
+run_program("/tmp/gvideobinary.sh");
+endif;
+
+if file_getprop("/tmp/aroma-data/gapps.prop","item.0.13") == "1" then
+package_extract_file("remove/gyoutubebinary", "/tmp/gyoutubebinary.sh");
+set_perm(0, 0, 0777, "/tmp/gyoutubebinary.sh");
+run_program("/tmp/gyoutubebinary.sh");
+endif;
+
+##################################################################################
+##                       REMOVE KNOX
+
+if file_getprop("/tmp/aroma-data/xtra.prop","item.0.1") == "1" then
+package_extract_file("remove/knoxbinary", "/tmp/knoxbinary.sh");
+set_perm(0, 0, 0777, "/tmp/knoxbinary.sh");
+run_program("/tmp/knoxbinary.sh");
+endif;
+
+unmount("/data");
+unmount("/system");
+
+ui_print("*******************");
+ui_print("DEBLOATING FINISHED");

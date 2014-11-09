@@ -1,0 +1,30 @@
+#!/sbin/sh
+
+###########################################WARNING############################################## 
+##                                                                                            ##
+## NO PERSONAL USE WITHOUT PERMISSION OF SkywalkerZ                                           ##
+## ANY OTHER USE WITHOUT PERMISSION WILL BE REPORTED                                          ##
+##                                                                                            ##
+## YOU HAVE BEEN WARNED                                                                       ##
+##                                                                                            ##
+## PART OF SMARTDROID                                                                         ##
+##                                                                                            ##
+################################################################################################
+
+mount /dev/block/mmcblk0p23 /system
+mount /dev/block/mmcblk0p26 /data
+
+cd /system/app
+rm /system/app/ChatON_MARKET.apk
+cd /system/lib
+rm /system/lib/libChatOnAMSImageFilterLibs-1.0.2.so
+cd /data/app
+rm /data/app/com.sec.chaton-1.apk
+rm /data/app/com.coolets.chaton-1.apk
+
+rm -r /data/dalvik-cache
+
+exit
+
+##By SkywalkerZ
+## For Any Roms G900F KK
